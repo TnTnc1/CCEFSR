@@ -192,9 +192,9 @@ header {
     background: var(--primary-dark);
 }
 
-/* HERO SECTION - MODIFICATION DE L'OPACITÉ ICI */
+/* HERO SECTION */
 .hero {
-    /* L'opacité est réduite (0.5 et 0.4 au lieu de 0.85 et 0.75) pour voir plus l'image */
+    /* Opacité réduite pour voir plus l'image (0.5 et 0.4) */
     background: linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.4)), url('https://i.postimg.cc/k4JmYdJz/image-1.png');
     background-size: cover;
     background-position: center;
@@ -236,14 +236,13 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* Petit ombrage pour que le texte reste lisible sur l'image plus claire */
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    opacity: 1; /* Opacité au max pour la lisibilité */
+    opacity: 1;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -278,6 +277,7 @@ header {
 
 /* SERVICES CARDS */
 .services {
+    /* Fond gris perle pour le contraste */
     background-color: #F0F2F5; 
     position: relative;
     z-index: 1;
@@ -595,13 +595,16 @@ footer {
     margin-bottom: 30px;
 }
 
-/* CSS POUR LE LOGO DANS LE FOOTER */
+/* CSS POUR LE LOGO DANS LE FOOTER (Sur fond blanc) */
 .footer-logo-img {
     max-height: 80px;
     width: auto;
     margin-bottom: 15px;
-    filter: brightness(0) invert(1); 
-    opacity: 0.8;
+    opacity: 1; 
+    background-color: var(--white); 
+    padding: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .footer-logo-section p {
