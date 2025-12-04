@@ -192,10 +192,10 @@ header {
     background: var(--primary-dark);
 }
 
-/* HERO SECTION AVEC VIDEO + IMAGE 1 EN FOND */
+/* HERO SECTION - MODIFICATION DE L'OPACITÉ ICI */
 .hero {
-    /* L'IMAGE 1 EN FOND */
-    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.75)), url('https://i.postimg.cc/k4JmYdJz/image-1.png');
+    /* L'opacité est réduite (0.5 et 0.4 au lieu de 0.85 et 0.75) pour voir plus l'image */
+    background: linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.4)), url('https://i.postimg.cc/k4JmYdJz/image-1.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -236,15 +236,18 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    /* Petit ombrage pour que le texte reste lisible sur l'image plus claire */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    opacity: 0.9;
+    opacity: 1; /* Opacité au max pour la lisibilité */
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
 .hero-buttons {
@@ -273,9 +276,8 @@ header {
     color: var(--primary);
 }
 
-/* SERVICES CARDS - MODIFIÉ POUR LE CONTRASTE */
+/* SERVICES CARDS */
 .services {
-    /* FOND GRIS LÉGER POUR FAIRE RESSORTIR LES CARTES BLANCHES */
     background-color: #F0F2F5; 
     position: relative;
     z-index: 1;
@@ -291,7 +293,6 @@ header {
     background: var(--white);
     padding: 50px 35px;
     border-radius: 15px;
-    /* OMBRE ET BORDURE POUR LE RELIEF */
     box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     border: 1px solid rgba(0,0,0,0.05);
     text-align: center;
