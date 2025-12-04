@@ -118,7 +118,7 @@
                 <a href="#contact" class="btn btn-primary">Réserver ma date par téléphone</a>
             </div>
             <div class="image-content">
-                <div class="fake-img" style="background: linear-gradient(45deg, #5D5D5D, #888); height: 350px; display:flex; align-items:center; justify-content:center; color:white; border-radius: 10px;"><i class="fas fa-users fa-3x"></i><br>Session de Formation</div>
+                <img src="https://i.postimg.cc/qRb9mhZ6/image-3.png" alt="Formation Salle de classe" class="content-img">
             </div>
         </div>
     </section>
@@ -138,7 +138,7 @@
                 <a href="#contact" class="btn btn-primary">Contacter M. Bolo pour une offre flotte</a>
             </div>
             <div class="image-content">
-                 <div class="fake-img" style="background: linear-gradient(45deg, #F39C12, #d68910); height: 350px; display:flex; align-items:center; justify-content:center; color:white; border-radius: 10px;"><i class="fas fa-truck-monster fa-3x"></i><br>Formation Sur Site / Mine</div>
+                 <img src="https://i.postimg.cc/QMsGVrTr/image2.png" alt="Formation Conduite Mine Pickup" class="content-img">
             </div>
         </div>
     </section>
@@ -158,7 +158,7 @@
                 <div class="contact-info">
                     <h3>Nos Coordonnées</h3>
                     <p><strong>Responsable :</strong> M. José BOLO</p>
-                    <p>Pour les inscriptions aux stages ou les demandes entreprises, merci de nous privilégier l'appel téléphonique.</p>
+                    <p>Pour les inscriptions aux stages ou les demandes entreprises, merci de privilégier l'appel téléphonique.</p>
                     <br>
                     <div class="info-item">
                         <i class="fas fa-phone-alt"></i>
@@ -207,7 +207,7 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-logo-section">
-                <img src="https://i.postimg.cc/8cBqBfG8/logo.png" alt="Logo CCEFSR Footer" class="footer-logo-img">
+                 <img src="https://i.postimg.cc/8cBqBfG8/logo.png" alt="Logo CCEFSR Footer" class="footer-logo-img">
                 <p>La référence de la formation routière en Nouvelle-Calédonie.</p>
             </div>
             
@@ -222,13 +222,11 @@
         const nav = document.querySelector('.nav-links');
         const navLinksA = document.querySelectorAll('.nav-links li a');
 
-        // Toggle nav
         burger.addEventListener('click', () => {
             nav.classList.toggle('nav-active');
             burger.classList.toggle('toggle');
         });
 
-        // Fermer le menu quand on clique sur un lien
         navLinksA.forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('nav-active');
