@@ -194,7 +194,7 @@ header {
 
 /* HERO SECTION AVEC VIDEO + IMAGE 1 EN FOND */
 .hero {
-    /* ICI ON A INTÉGRÉ L'IMAGE 1 */
+    /* L'IMAGE 1 EN FOND */
     background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.75)), url('https://i.postimg.cc/k4JmYdJz/image-1.png');
     background-size: cover;
     background-position: center;
@@ -388,11 +388,11 @@ header {
     flex: 1;
 }
 
-/* NOUVEAU STYLE POUR LES IMAGES INTÉGRÉES */
+/* STYLE POUR LES IMAGES INTÉGRÉES */
 .content-img {
     width: 100%;
     height: 350px;
-    object-fit: cover; /* Recadre l'image proprement sans déformer */
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
@@ -435,6 +435,24 @@ header {
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto 30px;
+}
+
+/* STYLES POUR L'ACTUALITÉ 2025 */
+.success-badge {
+    display: inline-block;
+    background-color: #fff;
+    color: var(--primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.news-block h3 {
+    font-size: 1.3rem !important;
 }
 
 .btn-white {
@@ -687,6 +705,14 @@ footer {
         width: 100%;
         height: auto !important;
         max-height: 250px;
+    }
+    
+    /* Ajustement bloc actualité sur mobile */
+    .news-block {
+        padding: 15px !important;
+    }
+    .news-block h3 {
+        font-size: 1.1rem !important;
     }
 
     .contact-grid {
