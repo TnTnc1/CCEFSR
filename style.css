@@ -137,9 +137,9 @@ header {
     align-items: center;
 }
 
-/* CSS POUR LE NOUVEAU LOGO IMAGE DANS LE HEADER */
+/* CSS POUR LE LOGO IMAGE DANS LE HEADER */
 .nav-logo-img {
-    max-height: 65px; /* Hauteur adaptée à la barre de nav */
+    max-height: 65px; 
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -192,19 +192,19 @@ header {
     background: var(--primary-dark);
 }
 
-/* HERO SECTION AVEC VIDEO */
+/* HERO SECTION AVEC VIDEO + IMAGE 1 EN FOND */
 .hero {
-    /* Image de fond sombre pour faire ressortir le blanc et la vidéo */
-    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.8)), url('https://source.unsplash.com/1600x900/?road,newcaledonia,driving');
+    /* ICI ON A INTÉGRÉ L'IMAGE 1 */
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.75)), url('https://i.postimg.cc/k4JmYdJz/image-1.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 95vh; /* Rempli presque tout l'écran */
+    min-height: 95vh;
     display: flex;
     align-items: center;
     text-align: center;
     color: var(--white);
-    padding-top: 80px; /* Pour compenser le header fixe */
+    padding-top: 80px;
 }
 
 .hero-content {
@@ -223,11 +223,11 @@ header {
 .hero-logo-video {
     width: 220px;
     height: 220px;
-    object-fit: cover; /* S'assure que la vidéo remplit le cercle */
-    border-radius: 50%; /* Rend la vidéo ronde */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Bel effet de relief */
-    background-color: var(--white); /* Fond blanc si la vidéo charge mal */
-    border: 4px solid var(--white); /* Bordure blanche pour faire propre */
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    background-color: var(--white);
+    border: 4px solid var(--white);
 }
 
 .hero h1 {
@@ -302,7 +302,6 @@ header {
     font-size: 3.5rem;
     color: var(--primary);
     margin-bottom: 25px;
-    /* Petit cercle gris derrière l'icône */
     background: rgba(243, 156, 18, 0.1);
     width: 100px;
     height: 100px;
@@ -320,7 +319,7 @@ header {
     text-align: left;
     margin: 30px 0;
     color: #666;
-    display: inline-block; /* Pour centrer le bloc de liste */
+    display: inline-block;
 }
 
 .card ul li {
@@ -389,20 +388,18 @@ header {
     flex: 1;
 }
 
-.fake-img {
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    text-align: center;
-    flex-direction: column;
-    font-weight: bold;
+/* NOUVEAU STYLE POUR LES IMAGES INTÉGRÉES */
+.content-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover; /* Recadre l'image proprement sans déformer */
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
 }
 
-.fake-img:hover {
+.content-img:hover {
     transform: scale(1.02);
-}
-
-.fake-img i {
-    margin-bottom: 15px;
 }
 
 .list-styled li {
@@ -412,7 +409,7 @@ header {
 }
 
 .list-styled li::before {
-    content: '\f058'; /* FontAwesome check circle */
+    content: '\f058'; 
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: var(--primary);
@@ -456,7 +453,7 @@ header {
 /* CONTACT */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Formulaire plus large */
+    grid-template-columns: 1fr 1.5fr; 
     gap: 60px;
     align-items: start;
 }
@@ -575,7 +572,6 @@ footer {
     max-height: 80px;
     width: auto;
     margin-bottom: 15px;
-    /* Filtre pour rendre le logo en nuances de gris/blanc pour le footer sombre */
     filter: brightness(0) invert(1); 
     opacity: 0.8;
 }
@@ -608,7 +604,6 @@ footer {
     border-radius: 3px;
 }
 
-/* Animation du Burger */
 .toggle .line1 { transform: rotate(-45deg) translate(-6px, 7px); background-color: var(--primary); }
 .toggle .line2 { opacity: 0; }
 .toggle .line3 { transform: rotate(45deg) translate(-6px, -7px); background-color: var(--primary); }
@@ -631,7 +626,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%; /* Pleine largeur sur mobile */
+        width: 100%; 
         transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
         box-shadow: none;
@@ -687,9 +682,11 @@ footer {
         flex-direction: column;
     }
 
-    .image-content, .fake-img {
+    /* Ajustement images sur mobile */
+    .image-content, .content-img {
         width: 100%;
-        height: 250px !important;
+        height: auto !important;
+        max-height: 250px;
     }
 
     .contact-grid {
